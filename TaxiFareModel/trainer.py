@@ -15,8 +15,8 @@ from sklearn.pipeline import Pipeline
 from sklearn.preprocessing import OneHotEncoder, StandardScaler
 
 
-
 class Trainer(object):
+
     def __init__(self, X, y):
         """
             X: pandas DataFrame
@@ -100,6 +100,7 @@ class Trainer(object):
 
 
 if __name__ == "__main__":
+
     # Get and clean data
     N = 100
     df = get_data_from_gcp(nrows=N)

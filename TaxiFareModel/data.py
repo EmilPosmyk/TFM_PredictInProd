@@ -7,6 +7,7 @@ from TaxiFareModel.params import BUCKET_NAME, BUCKET_TRAIN_DATA_PATH
 
 @simple_time_tracker
 def get_data_from_gcp(nrows=10000, optimize=False, **kwargs):
+
     """method to get the training data (or a portion of it) from google cloud bucket"""
     # Add Client() here
     client = storage.Client()
@@ -16,6 +17,7 @@ def get_data_from_gcp(nrows=10000, optimize=False, **kwargs):
 
 
 def clean_data(df, test=False):
+
     unused_column = "Unnamed: 0"
     if unused_column in df.keys():
         df = df.drop(axis=1, columns=["Unnamed: 0"])
