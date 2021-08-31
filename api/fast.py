@@ -36,7 +36,8 @@ app.add_middleware(
 def index():
     return {"greeting": "Hello world"}
 
-
+# http://localhost:8100/predict?pickup_datetime=2013-07-06%2017:18:00&pickup_longitude=-73.950655&
+# pickup_latitude=40.783282&dropoff_longitude=-73.984365&dropoff_latitude=40.769802&passenger_count=1
 @app.get("/predict")
 def predict(pickup_datetime,
             pickup_longitude,
